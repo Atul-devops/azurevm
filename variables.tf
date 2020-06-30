@@ -21,12 +21,6 @@ variable "vmsize" {
   description = "VM Size for the Production Environment"
   type        = "map"
 
-      default = {
-        small         =   "Standard_DS1_v2"
-        medium        =   "Standard_D2s_v3"
-        large         =   "Standard_D4s_v3"
-        extralarge    =   "Standard_D8s_v3"
-      }
 }
 
 variable "os_ms" {
