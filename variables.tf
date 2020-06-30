@@ -1,36 +1,37 @@
 variable "location" {
-  default = "westeurope"
+  default = "West US"
 }
 variable "admin_username" {
-  default = "testadmin"
+  default = "AzureUser"
 } 
 variable "rg_keyvault" {
   default = "Keyvault"
 }
 variable "keyvault_name" {
-  default = "FLOAPP-Keyvault"
+  default = "AZ-Keyvault"
 }
 variable "computer_name_Windows" {
   default = "WS01"
 }
 variable "rg_network" {
-  default = "Network-CloudyJourney-RG"
+  default = "spcclient-RG"
 }
 
 variable "vmsize" {
   description = "VM Size for the Production Environment"
-  type        = "map"
+  type        = "string"
+  default = "Standard_D2s_v3"
 
 }
 
 variable "os_ms" {
-  description = "Operating System for Database (MSSQL) on the Production Environment"
+  description = "Operating System for dev Environment"
   type        = "map"
 
       default = {
         publisher   =   "MicrosoftWindowsServer"
-        offer       =   "WindowsServer"
-        sku         =   "2019-Datacenter"
+        offer       =   "Windows-10"
+        sku         =   "19h1-evd"
         version     =   "latest"
       }
 }
